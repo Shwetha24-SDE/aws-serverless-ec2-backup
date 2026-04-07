@@ -1,4 +1,3 @@
-
 # 🚀 Automated EC2 Backup and Lifecycle Management
 
 ## 🔄 Project Workflow (Step-by-Step Implementation)
@@ -37,7 +36,7 @@ An EC2 instance was launched within the VPC to act as the primary server. This i
 An IAM role was created with appropriate permissions for EC2, S3, and CloudWatch. This enables secure interaction between AWS services, especially for Lambda execution.
  
 ![IAM Role](images/iam.png)
-![IAM Role](images/iam roles.png)
+![IAM Role](images/iam-roles.png)
 
 ---
 
@@ -56,10 +55,10 @@ An S3 bucket was created to store backup logs and metadata. It ensures high dura
 A Lambda function was developed to automate the backup process. It creates snapshots of EC2 volumes and stores logs in the S3 bucket.
 
 ![Lambda Function](images/lambda.png)
-![Lambda Function](images/lambda fucntions.png)
-![Lambda Function](images/basic settings.png)
-![Lambda Function](images/lambda code1.png)
-![Lambda Function](images/lambda code2.png)
+![Lambda Function](images/lambda-fucntions.png)
+![Lambda Function](images/basic-settings.png)
+![Lambda Function](images/lambda-code1.png)
+![Lambda Function](images/lambda-code2.png)
 
 
 ---
@@ -76,7 +75,7 @@ The Lambda function automatically creates EBS snapshots of the EC2 instance at s
 
 Snapshot details and execution logs are stored as objects in the S3 bucket. This helps in tracking backup history and maintaining records.
 
-![S3 Object](images/s3 objects.png)
+![S3 Object](images/s3-objects.png)
 
 
 ---
@@ -85,8 +84,8 @@ Snapshot details and execution logs are stored as objects in the S3 bucket. This
 
 Amazon EventBridge was configured to trigger the Lambda function at regular intervals (e.g., daily), enabling complete automation of the backup process.
 
-![EventBridge](images/event bridge.png)
-![EventBridge](images/bridge .png)
+![EventBridge](images/event-bridge.png)
+![EventBridge](images/bridge.png)
 
 
 ---
@@ -95,7 +94,7 @@ Amazon EventBridge was configured to trigger the Lambda function at regular inte
 
 The Lambda function also checks the age of snapshots and automatically deletes backups older than 7 days. This helps optimize storage usage and reduce costs.
 
-![Lambda Execution](images/lambda code2.png)
+![Lambda Execution](images/lambda-code2.png)
 
 ---
 
@@ -103,7 +102,7 @@ The Lambda function also checks the age of snapshots and automatically deletes b
 
 CloudWatch was used to monitor Lambda execution and log activities. It assists in debugging and ensures smooth operation of the automation workflow.
 
-![CloudWatch Logs](images/cloud watch log.png)
+![CloudWatch Logs](images/cloudwatch-log.png)
 
 ---
 
@@ -111,7 +110,7 @@ CloudWatch was used to monitor Lambda execution and log activities. It assists i
 
 All execution logs and backup details are stored in the S3 bucket, providing auditing capability and full transparency of operations.
 
-![S3 Logs](images/bucket log.png)
+![S3 Logs](images/bucket-log.png)
 
 ---
 
