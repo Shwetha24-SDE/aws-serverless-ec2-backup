@@ -116,5 +116,5 @@ All execution logs and backup details are stored in the S3 bucket, providing aud
 
 ## ✅ Conclusion
 
-This project demonstrates an automated EC2 backup solution using AWS services such as Lambda, EventBridge, S3, IAM, and CloudWatch.
+This project demonstrates an automated EC2 backup solution using AWS services such as VPC, EC2, Lambda, EventBridge, S3, IAM, and CloudWatch.
 It not only ensures regular backups but also implements lifecycle management by deleting snapshots older than 7 days, achieving efficient storage utilization and cost optimization.
