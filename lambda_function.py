@@ -5,7 +5,7 @@ import json
 ec2 = boto3.client('ec2')
 s3 = boto3.client('s3')
 
-# ✅ Updated bucket name
+
 BUCKET_NAME = 'project-bucket-01'
 
 def lambda_handler(event, context):
