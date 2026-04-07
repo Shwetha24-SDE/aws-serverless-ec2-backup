@@ -55,7 +55,7 @@ An S3 bucket was created to store backup logs and metadata. It ensures high dura
 A Lambda function was developed to automate the backup process. It creates snapshots of EC2 volumes and stores logs in the S3 bucket.
 
 ![Lambda Function](images/lambda.png)
-![Lambda Function](images/lambda-fucntions.png)
+![Lambda Function](images/lambda-functions.png)
 ![Lambda Function](images/basic-settings.png)
 ![Lambda Function](images/lambda-code1.png)
 ![Lambda Function](images/lambda-code2.png)
