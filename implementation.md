@@ -1,3 +1,4 @@
+
 # 🚀 Automated EC2 Backup and Lifecycle Management
 
 ## 🔄 Project Workflow (Step-by-Step Implementation)
@@ -36,7 +37,7 @@ An EC2 instance was launched within the VPC to act as the primary server. This i
 An IAM role was created with appropriate permissions for EC2, S3, and CloudWatch. This enables secure interaction between AWS services, especially for Lambda execution.
  
 ![IAM Role](images/iam.png)
-![IAM Role](images/iam-roles.png)
+![IAM Role](images/iam roles.png)
 
 ---
 
@@ -75,7 +76,7 @@ The Lambda function automatically creates EBS snapshots of the EC2 instance at s
 
 Snapshot details and execution logs are stored as objects in the S3 bucket. This helps in tracking backup history and maintaining records.
 
-![S3 Object](images/s3-objects.png)
+![S3 Object](images/s3 objects.png)
 
 
 ---
@@ -85,7 +86,7 @@ Snapshot details and execution logs are stored as objects in the S3 bucket. This
 Amazon EventBridge was configured to trigger the Lambda function at regular intervals (e.g., daily), enabling complete automation of the backup process.
 
 ![EventBridge](images/event bridge.png)
-![EventBridge](images/bridge.png)
+![EventBridge](images/bridge .png)
 
 
 ---
